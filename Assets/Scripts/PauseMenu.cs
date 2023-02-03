@@ -13,7 +13,7 @@ public class PauseMenu : MonoBehaviour
 
     void TogglePause()
     {
-        Time.timeScale=Time.timeScale==0?1:0;
+        Time.timeScale = Time.timeScale == 0 ? 1 : 0;
     }
     void TogglePauseMenunOpen()
     {
@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour
     }
     void SwitchToMainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     // Start is called before the first frame update
@@ -34,13 +34,14 @@ public class PauseMenu : MonoBehaviour
     {
         ExitButton.onClick.AddListener(SwitchToMainMenu);
         ResumeButton.onClick.AddListener(TogglePauseMenunOpen);
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
             TogglePauseMenuVisible();
         }
 
