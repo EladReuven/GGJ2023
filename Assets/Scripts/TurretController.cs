@@ -62,6 +62,7 @@ public class TurretController : MonoBehaviour
             bullet.transform.rotation = bulletSpawnLocation.rotation;
             Debug.Log(bulletSpawnLocation.localRotation);
             bullet.SetActive(true);
+            GameManager.Instance.currentAmmo -= 1;
         }
         else
         {

@@ -9,37 +9,38 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] GameObject turret;
     [SerializeField] List<GameObject> airEnemies;
     [SerializeField] List<GameObject> groundEnemies;
+    public float radius;
 
-    public void SpawnEnemey(float distance)
+    public void SpawnRandomEnemey()
     {
         float rand = UnityEngine.Random.value;
         double deg = (rand * 180) + 270f;
         double radians = deg / 360f * 2 * Math.PI;
         if ((deg >= 270 && deg < 285) || (deg <= 450 && deg > 435))
         {
-            SpawnRandomEnemyAir( distance, radians);
+            SpawnRandomEnemyGround(radians);
         }else
         {
-            SpawnRandomEnemyGround( distance, radians);
+            SpawnRandomEnemyAir(radians);
         }
     }
-    private void SpawnRandomEnemyGround(float distance, double radians)
+    private void SpawnRandomEnemyGround(double radians)
     {
         System.Random rand = new System.Random();
         GameObject enemy = groundEnemies[rand.Next(1,groundEnemies.Count)-1];
-        SpawnEnemy(enemy,distance,radians);
+        SpawnEnemy(enemy,radians);
     }
-    private void SpawnRandomEnemyAir(float distance, double radians)
+    private void SpawnRandomEnemyAir(double radians)
     {
         System.Random rand = new System.Random();
         GameObject enemy = airEnemies[rand.Next(1, airEnemies.Count) - 1];
-        SpawnEnemy(enemy, distance, radians);
+        SpawnEnemy(enemy, radians);
     }
 
 
-    private void SpawnEnemy(GameObject unit,float distance,double radians) { 
+    private void SpawnEnemy(GameObject unit,double radians) { 
     
-        Vector3 v = getv(radians)*distance;
+        Vector3 v = getv(radians)*this.radius;
         Quaternion quat = Quaternion.FromToRotation(turret.transform.position,  v); //the direction from spawn to turret
         GameObject obj = Instantiate(unit,v,quat);
     }

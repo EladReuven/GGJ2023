@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private EnemySpawner spawner;
     public static GameManager Instance;
 
     public int score = 0;
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour
     public bool starPower = false;
     public float starPowerDuration = 0;
     public float starPowerBonus = 3f;
-
+    private float t = 0;
 
     void Awake()
     {
@@ -54,6 +55,13 @@ public class GameManager : MonoBehaviour
         else
         {
             starPower = false;
+        }
+
+        t += Time.deltaTime;
+        if (t > 0.2f)
+        {
+            t = 0;
+            spawner.SpawnRandomEnemey();
         }
 
     }
