@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &129992363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 129992364}
+  m_Layer: 0
+  m_Name: TurretLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &129992364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129992363}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 7.824, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &210125933
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +166,7 @@ GameObject:
   - component: {fileID: 210125935}
   m_Layer: 0
   m_Name: Main Camera P2
-  m_TagString: MainCamera
+  m_TagString: Player2Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -408,6 +439,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea51946ab49a6a045846719c0d9627e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turretLocation: {fileID: 129992364}
+  turretHead: {fileID: 978927124}
+  Player1Camera: {fileID: 963194227}
 --- !u!1 &660677293
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,7 +742,7 @@ GameObject:
   - component: {fileID: 963194226}
   m_Layer: 0
   m_Name: Main Camera P1
-  m_TagString: MainCamera
+  m_TagString: Player1Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1168,7 +1202,7 @@ GameObject:
   - component: {fileID: 1253411913}
   m_Layer: 0
   m_Name: GunAimPlane
-  m_TagString: Untagged
+  m_TagString: AimWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1245,7 +1279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253411912}
   m_LocalRotation: {x: -0.7071057, y: -0, z: -0, w: 0.7071079}
-  m_LocalPosition: {x: 1.3638616, y: 43.363796, z: 9.072651}
+  m_LocalPosition: {x: 0, y: 22.1, z: 0}
   m_LocalScale: {x: 9.516027, y: 9.516027, z: 9.516027}
   m_ConstrainProportionsScale: 0
   m_Children: []
