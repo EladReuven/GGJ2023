@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] List<GameObject> airEnemies;
     [SerializeField] List<GameObject> groundEnemies;
 
-    public void SpawnEnemey(GameObject unit,float distance)
+    public void SpawnEnemey(float distance)
     {
         float rand = UnityEngine.Random.value;
         double deg = (rand * 180) + 270f;
