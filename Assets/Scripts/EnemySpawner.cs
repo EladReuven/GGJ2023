@@ -7,18 +7,38 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] GameObject turret;
-    [SerializeField] GameObject fox;
+    [SerializeField] List<GameObject> airEnemies;
+    [SerializeField] List<GameObject> groundEnemies;
 
     public void SpawnEnemey(GameObject unit,float distance)
     {
-        SpawnEnemyInternal(unit, distance);
+        float rand = UnityEngine.Random.value;
+        double deg = (rand * 180) + 270f;
+        double radians = deg / 360f * 2 * Math.PI;
+        if ((deg >= 270 && deg < 285) || (deg <= 450 && deg > 435))
+        {
+            SpawnRandomEnemyAir( distance, radians);
+        }else
+        {
+            SpawnRandomEnemyGround( distance, radians);
+        }
+    }
+    private void SpawnRandomEnemyGround(float distance, double radians)
+    {
+        System.Random rand = new System.Random();
+        GameObject enemy = groundEnemies[rand.Next(1,groundEnemies.Count)-1];
+        SpawnEnemy(enemy,distance,radians);
+    }
+    private void SpawnRandomEnemyAir(float distance, double radians)
+    {
+        System.Random rand = new System.Random();
+        GameObject enemy = airEnemies[rand.Next(1, airEnemies.Count) - 1];
+        SpawnEnemy(enemy, distance, radians);
     }
 
 
-    private void SpawnEnemyInternal(GameObject unit,float distance)
-    {
-        float rand = UnityEngine.Random.value;
-        double radians = (rand*150/360 * 2 * Math.PI) +(285f/360f)*2*Math.PI;
+    private void SpawnEnemy(GameObject unit,float distance,double radians) { 
+    
         Vector3 v = getv(radians)*distance;
         Quaternion quat = Quaternion.FromToRotation(turret.transform.position,  v); //the direction from spawn to turret
         GameObject obj = Instantiate(unit,v,quat);
