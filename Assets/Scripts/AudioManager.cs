@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
+using System.Net.Security;
 using Unity.VisualScripting;
 using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
@@ -7,7 +9,8 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     private static AudioManager instance;
-    [SerializeField] List<AudioClip> audioClips;  
+    [SerializeField] List<AudioClip> audioClips;
+    
     private AudioManager()
     {
         
@@ -33,7 +36,18 @@ public class AudioManager : MonoBehaviour
         return instance;
     }
 
-   
+   public void Play(string name)
+    {
+        foreach (AudioClip clip in audioClips)
+        {
+            if (name.Equals(clip.name))
+            {
+                GetAudioSource().PlayOneShot(clip);
+                return;
+            }
+        }
+        print("the clip named: " + name + " could not be found.");
+    }
 
     private AudioSource GetAudioSource()
     {
