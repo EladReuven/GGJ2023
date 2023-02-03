@@ -32,8 +32,16 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            collision.gameObject.SetActive(false);
+            //collision.gameObject.SetActive(false);
+            Destroy(collision.gameObject);
             gameObject.SetActive(false);
+        }
+
+        if(collision.gameObject.tag == "Sun")
+        {
+            Destroy(collision.gameObject);
+            gameObject.SetActive(false);
+            GameManager.Instance.StarPower();
         }
     }
 

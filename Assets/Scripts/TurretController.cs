@@ -45,13 +45,28 @@ public class TurretController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            GameManager.Instance.currentHP--;
+        }
+    }
+
     private void Shoot()
     {
-        GameObject bullet = GetPooledBullet();
-        bullet.transform.position = bulletSpawnLocation.position;
-        bullet.transform.rotation = bulletSpawnLocation.rotation;
-        Debug.Log(bulletSpawnLocation.localRotation);
-        bullet.SetActive(true);
+        if(GameManager.Instance.currentAmmo > 0)
+        {
+            GameObject bullet = GetPooledBullet();
+            bullet.transform.position = bulletSpawnLocation.position;
+            bullet.transform.rotation = bulletSpawnLocation.rotation;
+            Debug.Log(bulletSpawnLocation.localRotation);
+            bullet.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("NO AMMO");
+        }
     }
 
     GameObject GetPooledBullet()
