@@ -22,12 +22,9 @@ public class rootMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            for (int i = 0; i < 3; i++)
-            {
-                int x = Random.Range(0, RightRoots.Length);
-                Instantiate(RightRoots[x], transform.position, RightRoots[x].transform.rotation);
-                transform.DOMove(transform.position + RightRoots[x].GetComponentsInChildren<Transform>()[1].position, 1);
-            }
+            int x = Random.Range(0, RightRoots.Length);
+            Instantiate(RightRoots[x], transform.position, RightRoots[x].transform.rotation);
+            transform.DOMove(transform.position + RightRoots[x].GetComponentsInChildren<Transform>()[1].position, 1);
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
