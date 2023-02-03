@@ -7,6 +7,7 @@ TagManager:
   - Player2Camera
   - Player1Camera
   - AimWall
+  - Enemy
   layers:
   - Default
   - TransparentFX

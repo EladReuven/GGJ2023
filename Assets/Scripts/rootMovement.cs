@@ -1,14 +1,17 @@
+using DG.Tweening;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class rootMovement : MonoBehaviour
 {
+
     public float xUnits = 6.0f;
     public float yUnits = 2.5f;
 
-    [SerializeField]
-    GameObject rootBase;
+    [SerializeField] GameObject rootBase;
+    [SerializeField] GameObject[] LeftRoots;
+    [SerializeField] GameObject[] RightRoots;
 
     private void Start()
     {
@@ -19,11 +22,15 @@ public class rootMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            transform.position += new Vector3(yUnits, -xUnits, 0);
+            int x = Random.Range(0, RightRoots.Length);
+            Instantiate(RightRoots[x], transform.position, RightRoots[x].transform.rotation);
+            transform.DOMove(transform.position + RightRoots[x].GetComponentsInChildren<Transform>()[1].position, 1);
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            transform.position += new Vector3(-yUnits, -xUnits, 0);
+            int x = Random.Range(0, RightRoots.Length);
+            Instantiate(LeftRoots[x], transform.position, LeftRoots[x].transform.rotation);
+            transform.DOMove(transform.position + LeftRoots[x].GetComponentsInChildren<Transform>()[1].position, 1);
         }
     }
 }

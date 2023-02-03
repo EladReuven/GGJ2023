@@ -5,15 +5,32 @@ using UnityEngine;
 public class TurretController : MonoBehaviour
 {
 
+    [Header("Base")]
     [SerializeField] Transform turretLocation;
     [SerializeField] Transform turretHead;
+
+    [Header("Aiming")]
     [SerializeField] Camera Player1Camera;
+
+    [Header("Shooting")]
+    [SerializeField] Transform bulletSpawnLocation;
+    [SerializeField] GameObject bulletPrefab;
+    List<GameObject> bulletPool;
+    int bulletPoolSize = 10;
+
     Vector3 lookPos;
     Vector3 mousePos;
     // Start is called before the first frame update
     void Start()
     {
         gameObject.transform.position = turretLocation.position;
+        bulletPool = new List<GameObject>();
+        for (int i = 0; i < bulletPoolSize; i++)
+        {
+            GameObject bullet = Instantiate(bulletPrefab);
+            bulletPool.Add(bullet);
+            bullet.SetActive(false);
+        }
     }
     void Update()
     {
@@ -21,13 +38,55 @@ public class TurretController : MonoBehaviour
 
         FindLookPos();
         HandleRotation();
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Shoot();
+        }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            GameManager.Instance.currentHP--;
+        }
+    }
+
+    private void Shoot()
+    {
+        if(GameManager.Instance.currentAmmo > 0)
+        {
+            GameObject bullet = GetPooledBullet();
+            bullet.transform.position = bulletSpawnLocation.position;
+            bullet.transform.rotation = bulletSpawnLocation.rotation;
+            Debug.Log(bulletSpawnLocation.localRotation);
+            bullet.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("NO AMMO");
+        }
+    }
+
+    GameObject GetPooledBullet()
+    {
+        for (int i = 0; i < bulletPool.Count; i++)
+        {
+            if (!bulletPool[i].activeInHierarchy)
+            {
+                return bulletPool[i];
+            }
+        }
+        return null;
+    }
+
     private void FindLookPos()
     {
         Ray ray = Player1Camera.ScreenPointToRay(mousePos);
         Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~0, QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~0, QueryTriggerInteraction.Ignore)) //thx chatgpt
         {
             if (hit.collider.CompareTag("AimWall"))
             {
@@ -37,8 +96,8 @@ public class TurretController : MonoBehaviour
                 lookPos = lookP;
             }
         }
-        
     }
+
 
     private void HandleRotation()
     {

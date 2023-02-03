@@ -10,10 +10,15 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private Button ResumeButton;
     [SerializeField] private Button ExitButton;
     [SerializeField] private CanvasRenderer pauseMenu;
+    [SerializeField] private TurretController turretControler;
+    [SerializeField] private rootMovement rootMovement;
 
     void TogglePause()
     {
         Time.timeScale = Time.timeScale == 0 ? 1 : 0;
+        turretControler.enabled= !turretControler.enabled;
+        rootMovement.enabled = !rootMovement.enabled;
+
     }
     void TogglePauseMenunOpen()
     {
@@ -42,8 +47,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePauseMenuVisible();
+            TogglePauseMenunOpen();
         }
-
     }
 }
