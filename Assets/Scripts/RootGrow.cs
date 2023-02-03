@@ -17,11 +17,6 @@ public class RootGrow : MonoBehaviour
         gameObject.transform.localScale = Vector3.zero;
     }
 
-    private void Start()
-    {
-        called = true;
-    }
-
     private void Update()
     {
         if (sprout)
