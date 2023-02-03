@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
 
     void OnStart()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
     // Start is called before the first frame update
