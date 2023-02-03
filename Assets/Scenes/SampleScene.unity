@@ -467,6 +467,8 @@ MonoBehaviour:
   turretLocation: {fileID: 129992364}
   turretHead: {fileID: 978927124}
   Player1Camera: {fileID: 963194227}
+  bulletSpawnLocation: {fileID: 660677294}
+  bulletPrefab: {fileID: 2875748588506503455, guid: eace37004f56b4049ad3a67b94f3ac47, type: 3}
 --- !u!114 &363743914 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5563444950836557955, guid: 6082eea0d9082b94589e1c5e022586fe, type: 3}
@@ -1558,7 +1560,7 @@ BoxCollider:
   m_GameObject: {fileID: 1424469824}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
