@@ -1,0 +1,456 @@
+fileFormatVersion: 2
+guid: 53d35b4d1e4fdde40b2b22089447afb5
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_01_stylized_rock_01_stylized_rock_01Mat
+    second: {fileID: 2100000, guid: 9d5127ce0516fc642a372234f4b1c61d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_02_stylized_rock_02_stylized_rock_02Mat
+    second: {fileID: 2100000, guid: 69b30f71a434fb04180e4322b10bc24b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_03_stylized_rock_03_stylized_rock_03Mat
+    second: {fileID: 2100000, guid: b633d7f740d89374095bf6710664019e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_04_stylized_rock_04_stylized_rock_04Mat
+    second: {fileID: 2100000, guid: c2c87e09011f3c94dacabdaa2cc9da1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_05_stylized_rock_05_stylized_rock_05Mat
+    second: {fileID: 2100000, guid: 4cf4ef3bcf073a348bc3f176542dda9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_06_stylized_rock_06_stylized_rock_06Mat
+    second: {fileID: 2100000, guid: 8413765c1f6c83146a8595fb2582d7b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_07_stylized_rock_07_stylized_rock_07Mat
+    second: {fileID: 2100000, guid: 1aae9eea91dbbde4f86717e65cccd91d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_08_stylized_rock_08_stylized_rock_08Mat
+    second: {fileID: 2100000, guid: a59f5e480a7ba3d4bb2ab5559cb09cfb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_09_stylized_rock_09_stylized_rock_09Mat
+    second: {fileID: 2100000, guid: 1823bea98f053a248b9c8e711f333b54, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_10_stylized_rock_10_stylized_rock_10Mat
+    second: {fileID: 2100000, guid: 1401d59b4d952ab4e8e70adc630b62d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_11_stylized_rock_11_stylized_rock_11Mat
+    second: {fileID: 2100000, guid: ab46cea927fc32940b76b86e3267cd8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_12_stylized_rock_12_stylized_rock_12Mat
+    second: {fileID: 2100000, guid: 654743e1ad6f8434da395cd724680582, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_13_stylized_rock_13_stylized_rock_13Mat
+    second: {fileID: 2100000, guid: 01643699da8f8d7468e4c9e698c9ddfc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_14_stylized_rock_14_stylized_rock_14Mat
+    second: {fileID: 2100000, guid: 605f88db02051ca4797f7bc8160e1808, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_15_stylized_rock_15_stylized_rock_15Mat
+    second: {fileID: 2100000, guid: c4567bd1b527bd14dafce461f883f4ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_16_stylized_rock_16_stylized_rock_16Mat
+    second: {fileID: 2100000, guid: c9630d44b95a3154199869076cffb71f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_17_stylized_rock_17_stylized_rock_17Mat
+    second: {fileID: 2100000, guid: 8ab8ad3e9be05d944b3d015c729bc467, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_18_stylized_rock_18_stylized_rock_18Mat
+    second: {fileID: 2100000, guid: 3cbaff654c6d39c4591e11d9266bb655, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_19_stylized_rock_19_stylized_rock_19Mat
+    second: {fileID: 2100000, guid: a89967019b2c43d4fa3b00185d507f40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_20_stylized_rock_20_stylized_rock_20Mat
+    second: {fileID: 2100000, guid: c608723483eba0941851082ac8844863, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_21_stylized_rock_21_stylized_rock_21Mat
+    second: {fileID: 2100000, guid: 99d43163cfafa124db50fa15477ba70a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_22_stylized_rock_22_stylized_rock_22Mat
+    second: {fileID: 2100000, guid: 32ed4ced6f378af4fa697a01590d69af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_23_stylized_rock_23_stylized_rock_23Mat
+    second: {fileID: 2100000, guid: 9816d9ecc99f835469944b0032977c9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_24_stylized_rock_24_stylized_rock_24Mat
+    second: {fileID: 2100000, guid: 0ae6ee5ce64496d4689206fd5b7b39e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_25_stylized_rock_25_stylized_rock_25Mat
+    second: {fileID: 2100000, guid: dbeaa28862648a740bd1322301971a1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_26_stylized_rock_26_stylized_rock_26Mat
+    second: {fileID: 2100000, guid: de8e9d8dfd580a14c914708f0d07f1a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_27_stylized_rock_27_stylized_rock_27Mat
+    second: {fileID: 2100000, guid: 1fdbd0629a36a7d4f944d8fce0db27e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_28_stylized_rock_28_stylized_rock_28Mat
+    second: {fileID: 2100000, guid: 561a5f86508d93745bb87d453f310c8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_29_stylized_rock_29_stylized_rock_29Mat
+    second: {fileID: 2100000, guid: 0b4fe88ddc771514184bd33f20ffef7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_30_stylized_rock_30_stylized_rock_30Mat
+    second: {fileID: 2100000, guid: 63788adb6a7e5b347976f32a355782b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_31_stylized_rock_31_stylized_rock_31Mat
+    second: {fileID: 2100000, guid: 2b6887615686d6446bfc4333abaf8367, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_32_stylized_rock_32_stylized_rock_32Mat
+    second: {fileID: 2100000, guid: 11b42747df163f14a96ff67b9c7adca4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_33_stylized_rock_33_stylized_rock_33Mat
+    second: {fileID: 2100000, guid: 40ba9afbbb409d24cb7bc6ee3b66d0b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_34_stylized_rock_34_stylized_rock_34Mat
+    second: {fileID: 2100000, guid: aa1f6859543166c4387e3a312326d392, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_35_stylized_rock_35_stylized_rock_35Mat
+    second: {fileID: 2100000, guid: babbe12d69099774799c22371737cd9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_36_stylized_rock_36_stylized_rock_36Mat
+    second: {fileID: 2100000, guid: 5728a3860cd364349a6cae88c2fcd701, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_37_stylized_rock_37_stylized_rock_37Mat
+    second: {fileID: 2100000, guid: c8d2bf62a9c290a4f8ef653eb120d097, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_38_stylized_rock_38_stylized_rock_38Mat
+    second: {fileID: 2100000, guid: 130e8c0a1da07464a947070960afdccd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_39_stylized_rock_39_stylized_rock_39Mat
+    second: {fileID: 2100000, guid: c76eb91803acd0146bbc539d62f9827d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_40_stylized_rock_40_stylized_rock_40Mat
+    second: {fileID: 2100000, guid: 1cc88120272059848bd475c4575e9844, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_41_stylized_rock_41_stylized_rock_41Mat
+    second: {fileID: 2100000, guid: e8b32e8fdd8408643aec6d2f4786320e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_42_stylized_rock_42_stylized_rock_42Mat
+    second: {fileID: 2100000, guid: 145b3cdf86f04284896f33d6a6877978, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_43_stylized_rock_43_stylized_rock_43Mat
+    second: {fileID: 2100000, guid: e938dce6056aa9244b1a8d662ed03c76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_44_stylized_rock_44_stylized_rock_44Mat
+    second: {fileID: 2100000, guid: 38bdbfe5984c73d4e931c05854c975c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_45_stylized_rock_45_stylized_rock_45Mat
+    second: {fileID: 2100000, guid: 8c3908eaf953f44449d2b511d7ae612f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_46_stylized_rock_46_stylized_rock_46Mat
+    second: {fileID: 2100000, guid: b1f62add6f166d7408a02b60148e43cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_47_stylized_rock_47_stylized_rock_47Mat
+    second: {fileID: 2100000, guid: 30da15be21da9994297e2ed64ed08205, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_48_stylized_rock_48_stylized_rock_48Mat
+    second: {fileID: 2100000, guid: 7abd1aa8329986a4698d318ae293a712, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_49_stylized_rock_49_stylized_rock_49Mat
+    second: {fileID: 2100000, guid: 5c8fc95fe98fe9847830e029c8c42b5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_50_stylized_rock_50_stylized_rock_50Mat
+    second: {fileID: 2100000, guid: de68006215985d6439bfa9ee8ac92094, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_51_stylized_rock_51_stylized_rock_51Mat
+    second: {fileID: 2100000, guid: 35811a92a905cdc499538cdb22e06bca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_52_stylized_rock_52_stylized_rock_52Mat
+    second: {fileID: 2100000, guid: 31501f43a0db8064288afda35c98d966, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_53_stylized_rock_53_stylized_rock_53Mat
+    second: {fileID: 2100000, guid: 4fc291eb2ddecf0418a862078d9ce597, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_54_stylized_rock_54_stylized_rock_54Mat
+    second: {fileID: 2100000, guid: 276bcc07c85cb344cbcf9ba1e07655ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_55_stylized_rock_55_stylized_rock_55Mat
+    second: {fileID: 2100000, guid: 4c81f20e43279e840a2a524b47773f99, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_56_stylized_rock_56_stylized_rock_56Mat
+    second: {fileID: 2100000, guid: cb2dd871d45d1814f97859044493f717, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_57_stylized_rock_57_stylized_rock_57Mat
+    second: {fileID: 2100000, guid: 5c3e02fd9f126c04b905645960899de9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_58_stylized_rock_58_stylized_rock_58Mat
+    second: {fileID: 2100000, guid: 1dc2655f336595640874f4cc06cebc3d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_59_stylized_rock_59_stylized_rock_59Mat
+    second: {fileID: 2100000, guid: 1a951d186479c1040a03e596bbc9dcf2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_60_stylized_rock_60_stylized_rock_60Mat
+    second: {fileID: 2100000, guid: 1ed173daf07e1b641a90da143cead41f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_61_stylized_rock_61_stylized_rock_61Mat
+    second: {fileID: 2100000, guid: ddc224e58e00b9844ba716e6f3e246fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_62_stylized_rock_62_stylized_rock_62Mat
+    second: {fileID: 2100000, guid: 24459f069f7a3cd4f8b4280060655a92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_63_stylized_rock_63_stylized_rock_63Mat
+    second: {fileID: 2100000, guid: 47ea73ed4fe404048afee336259d704e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_64_stylized_rock_64_stylized_rock_64Mat
+    second: {fileID: 2100000, guid: 30d645017487b0042a8ebb7ea807a0bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_65_stylized_rock_65_stylized_rock_65Mat
+    second: {fileID: 2100000, guid: 9eef87ee4d1cd7841bba9ffcef3f6cfd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_66_stylized_rock_66_stylized_rock_66Mat
+    second: {fileID: 2100000, guid: aa4b9b1803948f141aaf1a97341155ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_67_stylized_rock_67_stylized_rock_67Mat
+    second: {fileID: 2100000, guid: 370c06fa29b50184eb15048464e3d41a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_68_stylized_rock_68_stylized_rock_68Mat
+    second: {fileID: 2100000, guid: fc829d66a1df05e41be23ab3f50b8526, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_69_stylized_rock_69_stylized_rock_69Mat
+    second: {fileID: 2100000, guid: 8d9a098a6eb584e498eae1f5a9437a75, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stylized_rock_70_stylized_rock_70_stylized_rock_70Mat
+    second: {fileID: 2100000, guid: 102b35fe57439194cb9f82a4a020f9b1, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
