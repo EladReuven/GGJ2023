@@ -8,14 +8,20 @@ public class RockGridCreation : MonoBehaviour
     public float yUnits = 2.5f;
 
     [SerializeField] GameObject[] RockList;
+    [SerializeField] GameObject[,] RockGrid;
     [SerializeField] Vector3 StartPostion;
 
-    private void Start()
+    
+    void CreateGrid()
     {
-        for(int i = 1; i < 4*8 ; i++)
+        for (int i = 0; i < 4; i++)
         {
-            if (i - 1 % 4 == 0)
+            if (i % 4 == 0)
+            {
+
+            }
         }
     }
+
 
 }

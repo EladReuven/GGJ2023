@@ -10,7 +10,6 @@ public class RootGrow : MonoBehaviour
     float countdownTimer = 0;
 
     bool sprout = true;
-    bool called = false;
 
 
     private void Awake()
