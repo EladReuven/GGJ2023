@@ -8,21 +8,13 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] GameObject turret;
     [SerializeField] GameObject fox;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     public void SpawnEnemey(GameObject unit,float distance)
     {
         SpawnEnemyInternal(unit, distance);
     }
+
+
     private void SpawnEnemyInternal(GameObject unit,float distance)
     {
         float rand = UnityEngine.Random.value;
