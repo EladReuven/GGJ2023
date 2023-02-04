@@ -16,6 +16,8 @@ public class rootMovement : MonoBehaviour
 
     public RootState RootMovementState { get; private set; }
 
+    KeyCode lastKey;
+
     float timeElapsed;
     float growTime = 1f;
 
@@ -27,10 +29,14 @@ public class rootMovement : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.RightArrow)) lastKey = KeyCode.RightArrow;
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) lastKey = KeyCode.LeftArrow;
+
         switch (RootMovementState)
         {
             case RootState.Idle:
-                if (Input.GetKeyDown(KeyCode.RightArrow))
+                if (lastKey == KeyCode.None) print("Debugs");
+                if (lastKey == KeyCode.RightArrow)
                 {
                     AudioManager.instance.PlaySound("rootgrowing");
                     int x = Random.Range(0, RightRoots.Length);
@@ -41,7 +47,7 @@ public class rootMovement : MonoBehaviour
                     print(RightRoots[x].GetComponentsInChildren<Transform>()[1].name);
                     RootMovementState = RootState.Grow;
                 }
-                else if (Input.GetKeyDown(KeyCode.LeftArrow))
+                else if (lastKey == KeyCode.LeftArrow)
                 {
                     AudioManager.instance.PlaySound("rootgrowing");
                     int x = Random.Range(0, LeftRoots.Length);
@@ -68,4 +74,4 @@ public class rootMovement : MonoBehaviour
     }
 
 }
-    public enum RootState { Idle,Grow,IsGrowing}
+public enum RootState { Idle, Grow, IsGrowing }
