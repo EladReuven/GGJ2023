@@ -18,6 +18,7 @@ public class EnemySpawner : MonoBehaviour
         double radians = deg / 360f * 2 * Math.PI;
         if ((deg >= 270 && deg < 285) || (deg <= 450 && deg > 435))
         {
+            if (deg<285) { radians = 270f/360f*2*Math.PI; } else { radians = 450f / 360f * 2 * Math.PI; }
             SpawnRandomEnemyGround(radians);
         }else
         {
@@ -38,11 +39,18 @@ public class EnemySpawner : MonoBehaviour
     }
 
 
-    private void SpawnEnemy(GameObject unit,double radians) { 
-    
+    private void SpawnEnemy(GameObject unit,double radians) {
+        
         Vector3 v = getv(radians)*this.radius;
-        Quaternion quat = Quaternion.FromToRotation(turret.transform.position,  v); //the direction from spawn to turret
-        GameObject obj = Instantiate(unit,v,quat);
+        Quaternion quat = Quaternion.FromToRotation(Vector3.up,  v - turret.transform.position); //the direction from spawn to turret
+        GameObject exampleobj = Instantiate(unit,v,quat);
+        Quaternion turn2 = radians > (2 * Math.PI) ? Quaternion.identity : Quaternion.AngleAxis(180f, exampleobj.transform.up);
+        Destroy(exampleobj);
+
+        quat = turn2*quat;
+
+        GameObject obj = Instantiate(unit, v, quat);
+
     }
     private Vector3 getv(double radians)
     {
