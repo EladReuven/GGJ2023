@@ -1600,6 +1600,7 @@ MonoBehaviour:
   - {fileID: 9053237892603702888, guid: d58af0a3539094e4fae849aa365b7763, type: 3}
   RightRoots:
   - {fileID: 9053237892603702888, guid: a3bcb65decb9b3248aeda64be6c6d3ca, type: 3}
+  platformGenerator: {fileID: 1929021933}
 --- !u!1001 &3060426811857076734
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class rootMovement : MonoBehaviour
     [SerializeField] GameObject rootBase;
     [SerializeField] GameObject[] LeftRoots;
     [SerializeField] GameObject[] RightRoots;
+    [SerializeField] PlatformGenerator platformGenerator;
 
     public RootState RootMovementState { get; private set; }
 
@@ -57,30 +58,14 @@ public class rootMovement : MonoBehaviour
                 timeElapsed += Time.deltaTime;
                 if (timeElapsed >= growTime)
                 {
+                    // Generate new Tiles
+                    platformGenerator.GeneratePlatforms();
                     timeElapsed = 0;
                     RootMovementState = RootState.Idle;
                 }
                 break;
         }
-        //}
-        //if (Input.GetKeyDown(KeyCode.RightArrow))
-        //{
-        //    AudioManager.instance.PlaySound("rootgrowing");
-        //    int x = Random.Range(0, RightRoots.Length);
-        //    Instantiate(RightRoots[x], transform.position, RightRoots[x].transform.rotation);
-        //    Vector3 newVector = RightRoots[x].GetComponentsInChildren<Transform>()[1].position;
-        //    Vector3 newestVector = new Vector3((transform.position.x - newVector.x), newVector.y + transform.position.y, newVector.z + transform.position.z);
-        //    transform.DOMove(newestVector, 1);
-        //    print(RightRoots[x].GetComponentsInChildren<Transform>()[1].name);
-        //}
-        //else if (Input.GetKeyDown(KeyCode.LeftArrow))
-        //{
-        //    AudioManager.instance.PlaySound("rootgrowing");
-        //    int x = Random.Range(0, LeftRoots.Length);
-        //    Instantiate(LeftRoots[x], transform.position, LeftRoots[x].transform.rotation);
-        //    transform.DOMove(transform.position + LeftRoots[x].GetComponentsInChildren<Transform>()[1].position, 1);
-        //}
     }
 
-    public enum RootState { Idle,Grow,IsGrowing}
 }
+    public enum RootState { Idle,Grow,IsGrowing}

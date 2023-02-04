@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class PlatformGenerator : MonoBehaviour
 {
-    public GameObject platformPrefab;
-    public Transform targetObject;
+    [Header("Platforms And Collectable Prefabs")]
+    [SerializeField] GameObject platformPrefab;
+    [SerializeField] GameObject obstclePrefab;
+    [SerializeField] GameObject waterPrefab;
+    [SerializeField] GameObject deshenPrefab;
+    [SerializeField] GameObject powerupPrefab;
+
+    [SerializeField] Transform targetObject;
     
 
     [Header("Fixed Distance")]
@@ -20,14 +26,13 @@ public class PlatformGenerator : MonoBehaviour
     
     Vector3 targetTransform;
 
-
     private void Update()
     {
         targetTransform = targetObject.position;
     }
 
     [ContextMenu("Generate")]
-    private void GeneratePlatforms()
+    public void GeneratePlatforms()
     {
         Vector3 leftPosition = targetTransform + new Vector3(-sideDistance, -platformDistance, 1);
         Vector3 rightPosition = targetTransform + new Vector3(sideDistance, -platformDistance, 1);

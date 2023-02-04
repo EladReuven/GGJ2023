@@ -10,18 +10,12 @@ public class RootGrow : MonoBehaviour
     float countdownTimer = 0;
 
     bool sprout = true;
-    bool called = false;
 
 
     private void Awake()
     {
         gameObject.transform.localScale = Vector3.zero;
         goalSize = transform.localScale;
-    }
-
-    private void Start()
-    {
-        called = true;
     }
 
     private void Update()
