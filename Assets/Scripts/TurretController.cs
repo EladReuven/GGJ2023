@@ -48,14 +48,28 @@ public class TurretController : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy")
         {
+            AudioManager.instance.PlaySound(HurtSound());
             GameManager.Instance.currentHP--;
         }
+    }
+
+    private string HurtSound()
+    {
+
+        int num = Random.Range(2, 10);
+        if(num > 4)
+        {
+            num = 1;
+        }
+        string hurt = "flowerhurt" + num;
+        return hurt;
     }
 
     private void Shoot()
     {
         if(GameManager.Instance.currentAmmo > 0)
         {
+            AudioManager.instance.PlaySound("shot");
             GameObject bullet = GetPooledBullet();
             bullet.transform.position = bulletSpawnLocation.position;
             bullet.transform.rotation = bulletSpawnLocation.rotation;
