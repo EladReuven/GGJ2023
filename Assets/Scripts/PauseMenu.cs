@@ -9,15 +9,18 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private Button ResumeButton;
     [SerializeField] private Button ExitButton;
+    [SerializeField] private Image GameOver;
     [SerializeField] private CanvasRenderer pauseMenu;
     [SerializeField] private TurretController turretControler;
     [SerializeField] private rootMovement rootMovement;
+    [SerializeField] private GameObject aimWall;
 
     void TogglePause()
     {
         Time.timeScale = Time.timeScale == 0 ? 1 : 0;
         turretControler.enabled= !turretControler.enabled;
         rootMovement.enabled = !rootMovement.enabled;
+        aimWall.SetActive(!aimWall.active);
 
     }
     void TogglePauseMenunOpen()
@@ -39,7 +42,7 @@ public class PauseMenu : MonoBehaviour
     {
         ExitButton.onClick.AddListener(SwitchToMainMenu);
         ResumeButton.onClick.AddListener(TogglePauseMenunOpen);
-
+        GameOver.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,6 +51,16 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePauseMenunOpen();
+        }
+        if(!GameManager.Instance.isAlive)
+        {
+            GameOver.gameObject.SetActive(true);
+            turretControler.enabled = false;
+            rootMovement.enabled = false;
+            aimWall.SetActive(false);
+            pauseMenu.gameObject.SetActive(true);
+            ResumeButton.gameObject.SetActive(false);
+            Time.timeScale = Time.timeScale = 0;
         }
     }
 }
