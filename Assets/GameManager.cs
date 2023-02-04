@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public bool isAlive;
 
     public UnityEvent WaterPickup;
+    public UnityEvent RootHurt;
 
 
 

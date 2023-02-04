@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterScript : MonoBehaviour
+public class ObstacleScript : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        GameManager.Instance.WaterPickup.Invoke();
-        Destroy(gameObject);        
+        GameManager.Instance.RootHurt.Invoke();
+        Destroy(gameObject);
     }
 }

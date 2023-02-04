@@ -32,6 +32,8 @@ public class TurretController : MonoBehaviour
             bulletPool.Add(bullet);
             bullet.SetActive(false);
         }
+
+        GameManager.Instance.RootHurt.AddListener(Hurt);
     }
     void Update()
     {
@@ -55,6 +57,14 @@ public class TurretController : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+
+    private void Hurt()
+    {
+        AudioManager.instance.PlaySound(HurtSound());
+        GameManager.Instance.currentHP--;
+    }
+
+
 
     private string HurtSound()
     {
