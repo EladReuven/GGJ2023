@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        WaterPickup.AddListener(EvenetDebug);
+        WaterPickup.AddListener(AddAmmo);
     }
 
     private void EvenetDebug() => print("event called");
