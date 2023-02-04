@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fa15765400e84294c852059ce6216b58
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: dda12f74ff9116a42b23482252b2c482, type: 3}
+  _instancesCopy:
+  - {fileID: 11400000, guid: 917806569f76889409dd862252104d07, type: 2}
+  _fileAsset: {instanceID: 0}
+  _assetPath: Assets/Texture/Dirt Texture/uploads_files_2416523_Stylized+ground.sbsar
