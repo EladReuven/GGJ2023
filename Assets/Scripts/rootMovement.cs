@@ -21,6 +21,7 @@ public class rootMovement : MonoBehaviour
     float timeElapsed;
     float growTime = 1f;
 
+    bool init = false;
 
     private void Start()
     {
@@ -29,9 +30,11 @@ public class rootMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow)) lastKey = KeyCode.RightArrow;
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) lastKey = KeyCode.LeftArrow;
-
+        if (!init)
+        {
+            init = true;
+            platformGenerator.GeneratePlatformsInitial();
+        }
         switch (RootMovementState)
         {
             case RootState.Idle:
@@ -64,7 +67,6 @@ public class rootMovement : MonoBehaviour
                 if (timeElapsed >= growTime)
                 {
                     // Generate new Tiles
-                    platformGenerator.GeneratePlatforms();
                     timeElapsed = 0;
                     RootMovementState = RootState.Idle;
                 }

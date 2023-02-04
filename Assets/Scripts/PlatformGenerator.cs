@@ -24,52 +24,45 @@ public class PlatformGenerator : MonoBehaviour
     GameObject LeftPosInstance;
     GameObject RightPosInstance;
 
-    Queue<GameObject> Instaces;
-
     int platformCount = 4;
     int platformRowCount = 1;
 
     Vector3 targetTransform;
+
+    List<Vector3> instances;
 
     private void Update()
     {
         targetTransform = targetObject.position;
     }
 
-    private void GenerateThree(Vector3 mostLeftVector)
-    {
-        Vector3 leftPosition = mostLeftVector + new Vector3(-sideDistance, -platformDistance, 1);
-        Vector3 Mid = mostLeftVector + new Vector3(sideDistance, -platformDistance, 1);
-        Vector3 rightPostion = mostLeftVector + new Vector3(sideDistance*3, -platformDistance, 1);
-        Instantiate(platformPrefab, leftPosition, Quaternion.identity);
-        Instantiate(platformPrefab, Mid, Quaternion.identity);
-        Instantiate(platformPrefab, rightPostion, Quaternion.identity);
-        GeneratePlatforms(leftPosition);
-        GeneratePlatforms(rightPostion);
-    }
-    private void GeneratePlatforms(Vector3 mostLeftVector)
-    {
-        Vector3 leftPosition = mostLeftVector + new Vector3(-sideDistance, -platformDistance, 1);
-        Vector3 rightPosition = mostLeftVector + new Vector3(sideDistance, -platformDistance, 1);
-        LeftPosInstance = Instantiate(platformPrefab, leftPosition, Quaternion.identity);
-        RightPosInstance = Instantiate(platformPrefab, rightPosition, Quaternion.identity);
-    }
 
     [ContextMenu("Generate")]
-    public void GeneratePlatforms()
+    public void GeneratePlatformsInitial()
     {
         Vector3 leftPosition = targetTransform + new Vector3(-sideDistance, -platformDistance, 1);
-        Vector3 rightPosition = targetTransform + new Vector3(sideDistance, -platformDistance, 1);
-        LeftPosInstance = Instantiate(platformPrefab, leftPosition, Quaternion.identity);
-        RightPosInstance = Instantiate(platformPrefab, rightPosition, Quaternion.identity);
-
-        if (canCreate)
+        Vector3 midLeftPos = targetTransform + new Vector3(-sideDistance * 3, -platformDistance, 1);
+        Vector3 MidRightPos = targetTransform + new Vector3(sideDistance, -platformDistance, 1);
+        Vector3 rightPosition = targetTransform + new Vector3(sideDistance * 3, -platformDistance, 1);
+        Instantiate(platformPrefab, leftPosition, Quaternion.identity);
+        Instantiate(platformPrefab, midLeftPos, Quaternion.identity);
+        Instantiate(platformPrefab, MidRightPos, Quaternion.identity);
+        Instantiate(platformPrefab, rightPosition, Quaternion.identity);
+        GeneratePlatforms(targetTransform + new Vector3(-sideDistance,- platformDistance,0),true);
+    }
+    public void GeneratePlatforms(Vector3 CharacteLoc,bool isSecond)
+    {
+        Vector3 leftPosition = CharacteLoc + new Vector3(-sideDistance, -platformDistance, 1);
+        Vector3 midLeftPos = CharacteLoc + new Vector3(-sideDistance * 3, -platformDistance, 1);
+        Vector3 MidRightPos = CharacteLoc + new Vector3(sideDistance, -platformDistance, 1);
+        Vector3 rightPosition = CharacteLoc + new Vector3(sideDistance * 3, -platformDistance, 1);
+        Instantiate(platformPrefab, leftPosition, Quaternion.identity);
+        Instantiate(platformPrefab, midLeftPos, Quaternion.identity);
+        Instantiate(platformPrefab, MidRightPos, Quaternion.identity);
+        Instantiate(platformPrefab, rightPosition, Quaternion.identity);
+        if (isSecond)
         {
-            canCreate = false;
-            for (int i = 0; i < 2; i++)
-            {
-                GenerateThree(leftPosition);
-            }
+            GeneratePlatforms(leftPosition, false);
         }
     }
 }
