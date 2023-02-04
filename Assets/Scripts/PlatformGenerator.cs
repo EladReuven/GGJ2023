@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformGenerator : MonoBehaviour
 {
     public bool canCreate = true;
-
+    public Vector3 lastTransform;
 
     [Header("Platforms And Collectable Prefabs")]
     [SerializeField] GameObject platformPrefab;
@@ -28,8 +28,7 @@ public class PlatformGenerator : MonoBehaviour
     int platformRowCount = 1;
 
     Vector3 targetTransform;
-
-    List<Vector3> instances;
+    
 
     private void Update()
     {
@@ -56,13 +55,19 @@ public class PlatformGenerator : MonoBehaviour
         Vector3 midLeftPos = CharacteLoc + new Vector3(-sideDistance * 3, -platformDistance, 1);
         Vector3 MidRightPos = CharacteLoc + new Vector3(sideDistance, -platformDistance, 1);
         Vector3 rightPosition = CharacteLoc + new Vector3(sideDistance * 3, -platformDistance, 1);
+        Vector3 MostrightPosition = CharacteLoc + new Vector3(sideDistance * 5, -platformDistance, 1);
         Instantiate(platformPrefab, leftPosition, Quaternion.identity);
         Instantiate(platformPrefab, midLeftPos, Quaternion.identity);
         Instantiate(platformPrefab, MidRightPos, Quaternion.identity);
         Instantiate(platformPrefab, rightPosition, Quaternion.identity);
+        Instantiate(platformPrefab, MostrightPosition, Quaternion.identity);
         if (isSecond)
         {
             GeneratePlatforms(leftPosition, false);
+        }
+        else
+        {
+            lastTransform = leftPosition;
         }
     }
 }

@@ -68,6 +68,7 @@ public class rootMovement : MonoBehaviour
                 {
                     // Generate new Tiles
                     timeElapsed = 0;
+                    platformGenerator.GeneratePlatforms(new Vector3(transform.position.x,platformGenerator.lastTransform.y,0),false);
                     RootMovementState = RootState.Idle;
                 }
                 break;
