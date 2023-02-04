@@ -1,9 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Net.Security;
 using UnityEngine;
+using System.Collections.Generic;
+using System;
 
 public class AudioManager : MonoBehaviour
 {
@@ -26,7 +23,7 @@ public class AudioManager : MonoBehaviour
         audioSources = new Dictionary<string, AudioSource>();
     }
 
-    public void PlaySound(string name)
+    public void PlaySound(string name, bool loop = false)
     {
         AudioClip clip = Array.Find(audioClips, item => item.name == name);
         if (clip != null)
@@ -37,7 +34,32 @@ public class AudioManager : MonoBehaviour
                 audioSource.clip = clip;
                 audioSources[name] = audioSource;
             }
+            audioSources[name].loop = loop;
             audioSources[name].Play();
+        }
+        else
+        {
+            Debug.LogError("Sound: " + name + " not found!");
+        }
+    }
+
+    public void PauseSound(string name)
+    {
+        if (audioSources.ContainsKey(name))
+        {
+            audioSources[name].Pause();
+        }
+        else
+        {
+            Debug.LogError("Sound: " + name + " not found!");
+        }
+    }
+
+    public void UnpauseSound(string name)
+    {
+        if (audioSources.ContainsKey(name))
+        {
+            audioSources[name].UnPause();
         }
         else
         {

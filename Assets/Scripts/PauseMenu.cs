@@ -15,6 +15,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private rootMovement rootMovement;
     [SerializeField] private GameObject aimWall;
 
+    bool paused = false;
+
     void TogglePause()
     {
         Time.timeScale = Time.timeScale == 0 ? 1 : 0;
@@ -22,9 +24,11 @@ public class PauseMenu : MonoBehaviour
         rootMovement.enabled = !rootMovement.enabled;
         aimWall.SetActive(!aimWall.active);
 
+
     }
     void TogglePauseMenunOpen()
     {
+
         TogglePause();
         TogglePauseMenuVisible();
     }
@@ -50,8 +54,22 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            if(!paused)
+            {
+                AudioManager.instance.PauseSound("maintheme");
+                AudioManager.instance.UnpauseSound("menutheme");
+                paused = !paused;
+            }
+            else
+            {
+                AudioManager.instance.PauseSound("menutheme");
+                AudioManager.instance.UnpauseSound("maintheme");
+                paused = !paused;
+
+            }
             TogglePauseMenunOpen();
         }
+
         if(!GameManager.Instance.isAlive)
         {
             GameOver.gameObject.SetActive(true);
