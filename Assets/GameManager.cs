@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     public float starPowerDuration = 0;
     public float starPowerBonus = 3f;
 
+    public bool isAlive;
+
 
     void Awake()
     {
@@ -38,32 +40,44 @@ public class GameManager : MonoBehaviour
     {
         currentHP = maxHP; 
         currentAmmo = maxAmmo;
+        isAlive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if(currentHP <= 0)
+        if(isAlive)
         {
-            Debug.Log("GAME OVER");
-        }
 
-        if(starPowerDuration > 0)
-        {
-            starPowerDuration -= Time.deltaTime;
+            if(currentHP <= 0)
+            {
+                isAlive = false;
+                Debug.Log("GAME OVER");
+            }
+
+            if(starPowerDuration > 0)
+            {
+                starPowerDuration -= Time.deltaTime;
+            }
+            else
+            {
+                starPower = false;
+            }
+            t += Time.deltaTime;
+            if (t > spawnInterval)
+            {
+                t = 0;
+                spawner.SpawnRandomEnemey();
+            }
+
         }
         else
         {
             starPower = false;
-        }
-        t += Time.deltaTime;
-        if (t > spawnInterval)
-        {
-            t = 0;
-            spawner.SpawnRandomEnemey();
-        }
+            currentAmmo = 0;
 
+        }
     }
 
 
