@@ -23,8 +23,8 @@ public class PlatformGenerator : MonoBehaviour
 
     private void GeneratePlatforms()
     {
-        Vector3 leftPosition = transform.position + new Vector3(-sideDistance, -platformDistance, -1);
-        Vector3 rightPosition = transform.position + new Vector3(sideDistance, -platformDistance, -1);
+        Vector3 leftPosition = transform.position + new Vector3(-sideDistance, -platformDistance, 1);
+        Vector3 rightPosition = transform.position + new Vector3(sideDistance, -platformDistance, 1);
         LeftPosInstance = Instantiate(platformPrefab, leftPosition, Quaternion.identity);
         RightPosInstance = Instantiate(platformPrefab, rightPosition, Quaternion.identity);
 

@@ -1595,17 +1595,9 @@ MonoBehaviour:
   yUnits: 2.5
   rootBase: {fileID: 144305312}
   LeftRoots:
-  - {fileID: 1030795244916426982, guid: f00d33b8538e6f648a9b17a60f49ab65, type: 3}
-  - {fileID: 1019345282058239482, guid: 79d391bf187dbaf41a43200825d3b1b3, type: 3}
-  - {fileID: 6712573634225400486, guid: 72142aae8e151704db49d1771d10f115, type: 3}
-  - {fileID: 8754403342563083298, guid: 7137f432ffe58984a929a2a0a004d6ad, type: 3}
-  - {fileID: 19957690503038712, guid: 0bd65d1923a4fee46b7b58e6cd95817a, type: 3}
+  - {fileID: 9053237892603702888, guid: d58af0a3539094e4fae849aa365b7763, type: 3}
   RightRoots:
-  - {fileID: 389901151144518549, guid: 0b07a66fc17ab4246a9cf1e87384ff46, type: 3}
-  - {fileID: 8385200887609550469, guid: 39e87e7c242cc3a40928f44e6c9e0994, type: 3}
-  - {fileID: 2361600739414771991, guid: 56c2cd9d95230f542a4d494d2759f0d1, type: 3}
-  - {fileID: 1069369012117846034, guid: 815c1546035412f42b58bbd59fadda83, type: 3}
-  - {fileID: 1369826961003732776, guid: 9e62c111cc2ff8d48a623a90faf9f6e0, type: 3}
+  - {fileID: 9053237892603702888, guid: 3c06e3f90838a7c4a964e45b44af84a7, type: 3}
 --- !u!1001 &3060426811857076734
 PrefabInstance:
   m_ObjectHideFlags: 0
