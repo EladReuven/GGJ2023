@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        AudioManager.instance.PlaySound("menutheme", true);
         startButton.onClick.AddListener(OnStart);   
     }
 

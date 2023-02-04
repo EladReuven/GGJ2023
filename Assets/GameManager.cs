@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.instance.PauseSound("menutheme");
+        AudioManager.instance.PlaySound("maintheme", true);
         currentHP = maxHP; 
         currentAmmo = maxAmmo;
         isAlive = true;
