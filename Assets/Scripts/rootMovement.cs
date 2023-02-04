@@ -35,8 +35,7 @@ public class rootMovement : MonoBehaviour
         switch (RootMovementState)
         {
             case RootState.Idle:
-                if (lastKey == KeyCode.None) print("Debugs");
-                if (lastKey == KeyCode.RightArrow)
+                if (Input.GetKeyDown(KeyCode.RightArrow))
                 {
                     AudioManager.instance.PlaySound("rootgrowing");
                     int x = Random.Range(0, RightRoots.Length);
@@ -47,7 +46,7 @@ public class rootMovement : MonoBehaviour
                     print(RightRoots[x].GetComponentsInChildren<Transform>()[1].name);
                     RootMovementState = RootState.Grow;
                 }
-                else if (lastKey == KeyCode.LeftArrow)
+                else if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
                     AudioManager.instance.PlaySound("rootgrowing");
                     int x = Random.Range(0, LeftRoots.Length);
