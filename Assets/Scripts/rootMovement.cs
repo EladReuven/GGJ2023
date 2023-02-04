@@ -22,12 +22,14 @@ public class rootMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
+            AudioManager.instance.PlaySound("rootgrowing");
             int x = Random.Range(0, RightRoots.Length);
             Instantiate(RightRoots[x], transform.position, RightRoots[x].transform.rotation);
             transform.DOMove(transform.position + RightRoots[x].GetComponentsInChildren<Transform>()[1].position, 1);
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            AudioManager.instance.PlaySound("rootgrowing");
             int x = Random.Range(0, RightRoots.Length);
             Instantiate(LeftRoots[x], transform.position, LeftRoots[x].transform.rotation);
             transform.DOMove(transform.position + LeftRoots[x].GetComponentsInChildren<Transform>()[1].position, 1);

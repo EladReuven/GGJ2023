@@ -1,56 +1,47 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Net.Security;
-using Unity.VisualScripting;
-using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    private static AudioManager instance;
-    [SerializeField] List<AudioClip> audioClips;
-    
-    private AudioManager()
-    {
-        
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
+    public static AudioManager instance;
+    public AudioClip[] audioClips;
+    private Dictionary<string, AudioSource> audioSources;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
-    }
-
-    public static AudioManager GetInstance()
-    {
-        if (instance==null)
+        if (instance == null)
         {
-            instance = new AudioManager();
+            instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-        return instance;
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        audioSources = new Dictionary<string, AudioSource>();
     }
 
-   public void Play(string name)
+    public void PlaySound(string name)
     {
-        foreach (AudioClip clip in audioClips)
+        AudioClip clip = Array.Find(audioClips, item => item.name == name);
+        if (clip != null)
         {
-            if (name.Equals(clip.name))
+            if (!audioSources.ContainsKey(name))
             {
-                GetAudioSource().PlayOneShot(clip);
-                return;
+                AudioSource audioSource = gameObject.AddComponent<AudioSource>();
+                audioSource.clip = clip;
+                audioSources[name] = audioSource;
             }
+            audioSources[name].Play();
         }
-        print("the clip named: " + name + " could not be found.");
-    }
-
-    private AudioSource GetAudioSource()
-    {
-        return new AudioSource();
+        else
+        {
+            Debug.LogError("Sound: " + name + " not found!");
+        }
     }
 }
