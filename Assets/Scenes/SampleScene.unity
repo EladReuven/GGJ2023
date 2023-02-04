@@ -211,28 +211,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &139465712 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6907543892316566156, guid: 6082eea0d9082b94589e1c5e022586fe, type: 3}
-  m_PrefabInstance: {fileID: 995013741}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &139465717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139465712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aebd872b5c6c09449ce09da4e77912f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ResumeButton: {fileID: 1397374656}
-  ExitButton: {fileID: 363743914}
-  pauseMenu: {fileID: 580481575}
-  turretControler: {fileID: 0}
-  rootMovement: {fileID: 0}
 --- !u!1 &144305312 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2335048eaa3e539419a6f17e089b680b, type: 3}
@@ -529,22 +507,17 @@ MonoBehaviour:
   bulletSpawnLocation: {fileID: 660677294}
   bulletPrefab: {fileID: 9214782380453408417, guid: eace37004f56b4049ad3a67b94f3ac47, type: 3}
   waterSplash: {fileID: 0}
---- !u!114 &363743914 stripped
+--- !u!114 &454993923 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5563444950836557955, guid: 6082eea0d9082b94589e1c5e022586fe, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8492137158723634361, guid: 6082eea0d9082b94589e1c5e022586fe, type: 3}
   m_PrefabInstance: {fileID: 995013741}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!222 &580481575 stripped
-CanvasRenderer:
-  m_CorrespondingSourceObject: {fileID: 2906424548762277116, guid: 6082eea0d9082b94589e1c5e022586fe, type: 3}
-  m_PrefabInstance: {fileID: 995013741}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &660677293
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,6 +766,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 139465717, guid: 6082eea0d9082b94589e1c5e022586fe, type: 3}
+      propertyPath: aimWall
+      value: 
+      objectReference: {fileID: 1253411912}
+    - target: {fileID: 139465717, guid: 6082eea0d9082b94589e1c5e022586fe, type: 3}
+      propertyPath: GameOver
+      value: 
+      objectReference: {fileID: 454993923}
+    - target: {fileID: 139465717, guid: 6082eea0d9082b94589e1c5e022586fe, type: 3}
+      propertyPath: rootMovement
+      value: 
+      objectReference: {fileID: 2119611218}
+    - target: {fileID: 139465717, guid: 6082eea0d9082b94589e1c5e022586fe, type: 3}
+      propertyPath: turretControler
+      value: 
+      objectReference: {fileID: 281184494}
     - target: {fileID: 3676403404786432109, guid: 6082eea0d9082b94589e1c5e022586fe, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -875,6 +864,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3676403404786432109, guid: 6082eea0d9082b94589e1c5e022586fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502853629082852697, guid: 6082eea0d9082b94589e1c5e022586fe, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6907543892316566156, guid: 6082eea0d9082b94589e1c5e022586fe, type: 3}
@@ -1283,17 +1276,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &1397374656 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4051111728609748171, guid: 6082eea0d9082b94589e1c5e022586fe, type: 3}
-  m_PrefabInstance: {fileID: 995013741}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1424469824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,6 +1415,7 @@ MonoBehaviour:
   starPower: 0
   starPowerDuration: 0
   starPowerBonus: 3
+  isAlive: 0
 --- !u!114 &1929021931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1479,6 +1462,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 1368264446888573310, guid: a4b14a1e9aa046746abddd7f5d9806b7, type: 3}
+  obstclePrefab: {fileID: 0}
+  waterPrefab: {fileID: 0}
+  deshenPrefab: {fileID: 0}
+  powerupPrefab: {fileID: 0}
   targetObject: {fileID: 2119611217}
   platformDistance: 9.39
   sideDistance: 3.91
