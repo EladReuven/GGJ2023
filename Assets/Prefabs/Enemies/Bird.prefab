@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8005563833821182134}
   - component: {fileID: 928427817840953541}
   - component: {fileID: 1864326306056520790}
+  - component: {fileID: 227846568527860371}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Enemy
@@ -77,6 +78,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &227846568527860371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8528702625194161821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 999bdf90060b1dc4db3b4c08b3f6624d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8528702624879184785
 PrefabInstance:
   m_ObjectHideFlags: 0
