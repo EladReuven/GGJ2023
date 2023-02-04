@@ -50,6 +50,7 @@ public class TurretController : MonoBehaviour
         {
             AudioManager.instance.PlaySound(HurtSound());
             GameManager.Instance.currentHP--;
+            Destroy(collision.gameObject);
         }
     }
 

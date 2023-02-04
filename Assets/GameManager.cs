@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     [SerializeField] private EnemySpawner spawner;
+    public float spawnInterval = 3;
     private float t;
     public int score = 0;
 
@@ -57,7 +58,7 @@ public class GameManager : MonoBehaviour
             starPower = false;
         }
         t += Time.deltaTime;
-        if (t > 0.3)
+        if (t > spawnInterval)
         {
             t = 0;
             spawner.SpawnRandomEnemey();
