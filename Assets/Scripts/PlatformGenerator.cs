@@ -61,7 +61,7 @@ public class PlatformGenerator : MonoBehaviour
 
         Instantiate(platformPrefab, leftPosition, Quaternion.identity);
         Instantiate(platformPrefab, midLeftPos, Quaternion.identity);
-        Instantiate(platformPrefab, MidRightPos, Quaternion.identity);
+        Instantiate(waterPrefab, MidRightPos, Quaternion.identity);
         Instantiate(platformPrefab, rightPosition, Quaternion.identity);
         Instantiate(platformPrefab, MostrightPosition, Quaternion.identity);
         Instantiate(platformPrefab, MostLeft, Quaternion.identity);
