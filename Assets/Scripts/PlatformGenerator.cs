@@ -5,26 +5,32 @@ using UnityEngine;
 public class PlatformGenerator : MonoBehaviour
 {
     public GameObject platformPrefab;
+    public Transform targetObject;
+    
 
     [Header("Fixed Distance")]
-    [SerializeField] float platformDistance = 6f;
-    [SerializeField] float sideDistance = 2.5f;
+    [SerializeField] float platformDistance = 9.39f;
+    [SerializeField] float sideDistance = 3.91f;
 
     GameObject LeftPosInstance;
     GameObject RightPosInstance;
 
     int platformCount = 4;
     int platformRowCount = 1;
+    
+    Vector3 targetTransform;
 
-    private void Start()
+
+    private void Update()
     {
-        GeneratePlatforms();
+        targetTransform = targetObject.position;
     }
 
+    [ContextMenu("Generate")]
     private void GeneratePlatforms()
     {
-        Vector3 leftPosition = transform.position + new Vector3(-sideDistance, -platformDistance, 1);
-        Vector3 rightPosition = transform.position + new Vector3(sideDistance, -platformDistance, 1);
+        Vector3 leftPosition = targetTransform + new Vector3(-sideDistance, -platformDistance, 1);
+        Vector3 rightPosition = targetTransform + new Vector3(sideDistance, -platformDistance, 1);
         LeftPosInstance = Instantiate(platformPrefab, leftPosition, Quaternion.identity);
         RightPosInstance = Instantiate(platformPrefab, rightPosition, Quaternion.identity);
 
