@@ -1478,6 +1478,9 @@ MonoBehaviour:
   starPowerDuration: 0
   starPowerBonus: 3
   isAlive: 0
+  WaterPickup:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1929021931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1525,11 +1528,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canCreate: 1
   lastTransform: {x: 0, y: 0, z: 0}
-  platformPrefab: {fileID: 1368264446888573310, guid: a4b14a1e9aa046746abddd7f5d9806b7, type: 3}
-  obstclePrefab: {fileID: 0}
-  waterPrefab: {fileID: 919132149155446097, guid: 114a1be138a81c046ba8c27fa484af05, type: 3}
-  deshenPrefab: {fileID: 0}
-  powerupPrefab: {fileID: 0}
+  Prefabs:
+  - {fileID: 100000, guid: 61efeedd509c7d44eb2acbc1b56a1e8f, type: 3}
+  - {fileID: 3093950952214365346, guid: 20204b57e6c12d841b3a94505972225d, type: 3}
+  - {fileID: 75891812153873396, guid: 983e2d5d4120d104e9f8e2044d869eba, type: 3}
   targetObject: {fileID: 2119611217}
   platformDistance: 9.39
   sideDistance: 3.91
