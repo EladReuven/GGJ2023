@@ -5,22 +5,17 @@ public class RootGrow : MonoBehaviour
     [SerializeField] float scaleTime;
 
 
-    Vector3 goalSize = Vector3.one;
+    Vector3 goalSize;
 
     float countdownTimer = 0;
 
     bool sprout = true;
-    bool called = false;
 
 
     private void Awake()
     {
         gameObject.transform.localScale = Vector3.zero;
-    }
-
-    private void Start()
-    {
-        called = true;
+        goalSize = transform.localScale;
     }
 
     private void Update()
