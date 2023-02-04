@@ -6,7 +6,10 @@ public class ObstacleScript : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        GameManager.Instance.RootHurt.Invoke();
-        Destroy(gameObject);
+        if (other.tag == "Player")
+        {
+            GameManager.Instance.RootHurt.Invoke();
+            Destroy(gameObject);
+        }
     }
 }

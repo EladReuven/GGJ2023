@@ -161,10 +161,9 @@ MonoBehaviour:
   GenerateAllMipmaps: 1
   OutputMaterial: {fileID: 0}
   DefaultPreset: " <sbspreset pkgurl=\"pkg://Ground\" label=\"\" >\n  <presetinput
-    identifier=\"$outputsize\" uid=\"2527831057\" type=\"8\" value=\"10,10\" />\n
-    </sbspreset>\n"
+    identifier=\"$outputsize\" uid=\"2527831057\" type=\"8\" value=\"10,10\" />\n</sbspreset>\n"
   MaterialShader: 
-  RenderTextures: 0
+  RenderTextures: 1
   OutputRemaped: 0
   references:
     version: 2
