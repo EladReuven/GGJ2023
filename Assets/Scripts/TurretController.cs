@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TurretController : MonoBehaviour
 {
-
     [Header("Base")]
     [SerializeField] Transform turretLocation;
     [SerializeField] Transform turretHead;
@@ -17,6 +16,9 @@ public class TurretController : MonoBehaviour
     [SerializeField] GameObject bulletPrefab;
     List<GameObject> bulletPool;
     int bulletPoolSize = 10;
+
+    [Header("Particle System")]
+    [SerializeField] ParticleSystem waterSplash;
 
     Vector3 lookPos;
     Vector3 mousePos;
@@ -75,7 +77,11 @@ public class TurretController : MonoBehaviour
             bullet.transform.rotation = bulletSpawnLocation.rotation;
             Debug.Log(bulletSpawnLocation.localRotation);
             bullet.SetActive(true);
-            GameManager.Instance.currentAmmo -= 1;
+            GameManager.Instance.currentAmmo -= 1;            
+        }
+        if (waterSplash != null)
+        {
+            waterSplash.Play();
         }
         else
         {
