@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,6 +22,11 @@ public class GameManager : MonoBehaviour
 
     public bool isAlive;
 
+    public UnityEvent WaterPickup;
+    public UnityEvent RootHurt;
+
+
+
 
     void Awake()
     {
@@ -33,8 +39,11 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        WaterPickup.AddListener(AddAmmo);
     }
 
+    private void EvenetDebug() => print("event called");
 
     private void Start()
     {
