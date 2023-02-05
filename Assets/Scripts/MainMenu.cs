@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     void OnStart()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         AudioManager.instance.PauseSound("maintheme");
         AudioManager.instance.UnpauseSound("menutheme");
     }
@@ -20,6 +20,11 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         startButton.onClick.AddListener(OnStart);   
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 
 }
