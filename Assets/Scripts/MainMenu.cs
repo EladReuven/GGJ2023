@@ -12,6 +12,8 @@ public class MainMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
+        AudioManager.instance.PauseSound("maintheme");
+        AudioManager.instance.UnpauseSound("menutheme");
     }
     // Start is called before the first frame update
 

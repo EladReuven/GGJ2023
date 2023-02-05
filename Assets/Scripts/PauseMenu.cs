@@ -28,7 +28,19 @@ public class PauseMenu : MonoBehaviour
     }
     void TogglePauseMenunOpen()
     {
+        if (!paused)
+        {
+            AudioManager.instance.PauseSound("maintheme");
+            AudioManager.instance.UnpauseSound("menutheme");
+            paused = !paused;
+        }
+        else
+        {
+            AudioManager.instance.PauseSound("menutheme");
+            AudioManager.instance.UnpauseSound("maintheme");
+            paused = !paused;
 
+        }
         TogglePause();
         TogglePauseMenuVisible();
     }
@@ -54,19 +66,19 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(!paused)
-            {
-                AudioManager.instance.PauseSound("maintheme");
-                AudioManager.instance.UnpauseSound("menutheme");
-                paused = !paused;
-            }
-            else
-            {
-                AudioManager.instance.PauseSound("menutheme");
-                AudioManager.instance.UnpauseSound("maintheme");
-                paused = !paused;
+            //if(!paused)
+            //{
+            //    AudioManager.instance.PauseSound("maintheme");
+            //    AudioManager.instance.UnpauseSound("menutheme");
+            //    paused = !paused;
+            //}
+            //else
+            //{
+            //    AudioManager.instance.PauseSound("menutheme");
+            //    AudioManager.instance.UnpauseSound("maintheme");
+            //    paused = !paused;
 
-            }
+            //}
             TogglePauseMenunOpen();
         }
 
@@ -79,6 +91,9 @@ public class PauseMenu : MonoBehaviour
             pauseMenu.gameObject.SetActive(true);
             ResumeButton.gameObject.SetActive(false);
             Time.timeScale = Time.timeScale = 0;
+            AudioManager.instance.PauseSound("maintheme");
+            AudioManager.instance.UnpauseSound("menutheme");
+
         }
     }
 }
