@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     public int maxHP = 10;
     public int currentHP;
-    public int maxAmmo = 5;
+    public int maxAmmo = 10;
     public int currentAmmo;
 
     public bool starPower = false;

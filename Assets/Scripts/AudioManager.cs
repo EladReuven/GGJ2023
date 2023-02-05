@@ -66,4 +66,16 @@ public class AudioManager : MonoBehaviour
             Debug.LogError("Sound: " + name + " not found!");
         }
     }
+
+    public void SetVolume(string name, float volume)
+    {
+        if (audioSources.ContainsKey(name))
+        {
+            audioSources[name].volume = volume;
+        }
+        else
+        {
+            Debug.LogError("Sound: " + name + " not found!");
+        }
+    }
 }
