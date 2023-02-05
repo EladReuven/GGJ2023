@@ -23,6 +23,14 @@ public class AudioManager : MonoBehaviour
         audioSources = new Dictionary<string, AudioSource>();
     }
 
+    private void Start()
+    {
+        AudioManager.instance.PlaySound("menutheme", true);
+        AudioManager.instance.PlaySound("maintheme", true);
+        AudioManager.instance.PauseSound("maintheme");
+
+    }
+
     public void PlaySound(string name, bool loop = false)
     {
         AudioClip clip = Array.Find(audioClips, item => item.name == name);
@@ -60,6 +68,18 @@ public class AudioManager : MonoBehaviour
         if (audioSources.ContainsKey(name))
         {
             audioSources[name].UnPause();
+        }
+        else
+        {
+            Debug.LogError("Sound: " + name + " not found!");
+        }
+    }
+
+    public void SetVolume(string name, float volume)
+    {
+        if (audioSources.ContainsKey(name))
+        {
+            audioSources[name].volume = volume;
         }
         else
         {

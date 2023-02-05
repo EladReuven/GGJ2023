@@ -19,7 +19,7 @@ public class rootMovement : MonoBehaviour
     KeyCode lastKey;
 
     float timeElapsed;
-    float growTime = 1f;
+    float growTime = 0.3f;
 
     bool init = false;
 
@@ -45,7 +45,7 @@ public class rootMovement : MonoBehaviour
                     Instantiate(RightRoots[x], transform.position, RightRoots[x].transform.rotation);
                     Vector3 newVector = RightRoots[x].GetComponentsInChildren<Transform>()[1].position;
                     Vector3 newestVector = new Vector3((transform.position.x - newVector.x), newVector.y + transform.position.y, newVector.z + transform.position.z);
-                    transform.DOMove(newestVector, 1);
+                    transform.DOMove(newestVector, growTime);
                     print(RightRoots[x].GetComponentsInChildren<Transform>()[1].name);
                     RootMovementState = RootState.Grow;
                 }
@@ -54,7 +54,7 @@ public class rootMovement : MonoBehaviour
                     AudioManager.instance.PlaySound("rootgrowing");
                     int x = Random.Range(0, LeftRoots.Length);
                     Instantiate(LeftRoots[x], transform.position, LeftRoots[x].transform.rotation);
-                    transform.DOMove(transform.position + LeftRoots[x].GetComponentsInChildren<Transform>()[1].position, 1);
+                    transform.DOMove(transform.position + LeftRoots[x].GetComponentsInChildren<Transform>()[1].position, growTime);
                     RootMovementState = RootState.Grow;
                 }
                 break;

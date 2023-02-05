@@ -8,5 +8,11 @@ public class Squirrel : MonoBehaviour
     void Start()
     {
         AudioManager.instance.PlaySound("squirrel");
+        AudioManager.instance.PlaySound("fox");
+    }
+
+    private void OnDestroy()
+    {
+        AudioManager.instance.PauseSound("fox");
     }
 }

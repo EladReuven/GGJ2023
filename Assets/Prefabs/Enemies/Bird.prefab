@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8005563833821182134}
   - component: {fileID: 928427817840953541}
   - component: {fileID: 227846568527860371}
+  - component: {fileID: 6175304697649180941}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Enemy
@@ -76,9 +77,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999bdf90060b1dc4db3b4c08b3f6624d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angleChangeRate: 35
-  speed: 8
-  turnTime: 0.7
+--- !u!114 &6175304697649180941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8528702625194161821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624818e1ca4c4ba4698a85236962e247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1001 &8528702624879184785
 PrefabInstance:
   m_ObjectHideFlags: 0
