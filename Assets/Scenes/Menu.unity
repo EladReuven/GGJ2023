@@ -292,6 +292,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7622007435254011393, guid: 89ecb0f857f23044badffd720309e637, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1745233793}
+    - target: {fileID: 7622007435254011393, guid: 89ecb0f857f23044badffd720309e637, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622007435254011393, guid: 89ecb0f857f23044badffd720309e637, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622007435254011393, guid: 89ecb0f857f23044badffd720309e637, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7622007436268475403, guid: 89ecb0f857f23044badffd720309e637, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -382,6 +398,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89ecb0f857f23044badffd720309e637, type: 3}
+--- !u!114 &1745233793 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 736906908, guid: 89ecb0f857f23044badffd720309e637, type: 3}
+  m_PrefabInstance: {fileID: 1003471557}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 674217c2c5270fe4893c6a2ae9e8816a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1916011917
 GameObject:
   m_ObjectHideFlags: 0

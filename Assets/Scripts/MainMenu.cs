@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] Button startButton;
 
-    void OnStart()
+    public void OnStart()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(1);
@@ -17,10 +17,10 @@ public class MainMenu : MonoBehaviour
     }
     // Start is called before the first frame update
 
-    void Start()
-    {
-        startButton.onClick.AddListener(OnStart);   
-    }
+    //void Start()
+    //{
+    //    startButton.onClick.AddListener(OnStart);   
+    //}
 
     public void Quit()
     {
